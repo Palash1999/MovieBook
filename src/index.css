@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: #22254b;
+  color: white;
+  font-family: "Merriweather", serif;
+  margin: 0;
+}
+
+.tag {
+  background-color: #22254b;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+.tag.green {
+  color: rgb(37, 192, 37);
+}
+
+.tag.orange {
+  color: orange;
+}
+
+.tag.red {
+  color: red;
+}
+.search {
+  border: 2xp solid #22254b;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: white;
+  padding: 0.5rem 0.5rem;
+  background-color: transparent;
+}
+
+.search:focus {
+  outline: 0;
+}
+
+header {
+  background-color: #373b69;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.movie {
+  background-color: #373b69;
+  width: 300px;
+  position: relative;
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+  overflow: hidden;
+}
+
+.movie img {
+  object-fit: cover;
+  height: 420px;
+  width: 100%;
+}
+
+.movie-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.movie-info h3 {
+  margin: 0;
+}
+
+.movie-over {
+  background-color: white;
+  transform: translateY(100%);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow: 3px 3px 5px rgb(194, 194, 194);
+  transition: transform 0.3s ease-in-out;
+  color: #22254b;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  max-height: 100%;
+}
+
+.movie:hover .movie-over {
+  transform: translateY(0%);
+}
